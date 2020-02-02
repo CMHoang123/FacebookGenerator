@@ -56,6 +56,7 @@ function eventTime(eventList) {
   for(let value of Object.entries(eventList)){
     const event = eventList[value];
     console.log("Time: " + JSON.stringify(event));
+    console.log("e");
   }
 
   // return (
