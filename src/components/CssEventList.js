@@ -50,35 +50,14 @@ const useStyles = makeStyles(theme => ({
 
 function eventTime(eventList) {
   const result = [];
-  if(eventList == null){
+  if (eventList == null) {
     return;
   }
-  for(let value of Object.entries(eventList)){
+  for (let value of Object.entries(eventList)) {
     const event = eventList[value];
     console.log("Time: " + JSON.stringify(event));
     console.log("e");
   }
-
-  // return (
-  //   <div>
-  //     {event_times.map(event => (
-  //       <div>
-  //         <p>
-  //           Start time:
-  //           {event.start_time === ""
-  //             ? "None"
-  //             : moment(event.start_time).format("dddd, MMMM Do YYYY, h:mm a")}
-  //         </p>
-  //         <p>
-  //           End time:
-  //           {event.end_time === ""
-  //             ? "None"
-  //             : moment(event.end_time).format("dddd, MMMM Do YYYY, h:mm a")}
-  //         </p>
-  //       </div>
-  //     ))}
-  //   </div>
-  // );
 }
 
 function EventList(props) {
@@ -125,7 +104,22 @@ function EventList(props) {
                           Location: {event.place.location.city},
                           {event.place.location.country}
                         </p>
-                        
+                        <p>
+                          Start time:
+                          {event.start_time === ""
+                            ? "None"
+                            : moment(event.start_time).format(
+                                "dddd, MMMM Do YYYY, h:mm a"
+                              )}
+                        </p>
+                        <p>
+                          End time:
+                          {event.end_time === ""
+                            ? "None"
+                            : moment(event.end_time).format(
+                                "dddd, MMMM Do YYYY, h:mm a"
+                              )}
+                        </p>
                       </div>
                     }
                   />

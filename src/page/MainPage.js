@@ -193,7 +193,7 @@ class FBApi extends React.Component {
       {
         fields: "id,name,email",
         access_token:
-          "EAAMIaToJEsABAEJoY5ZAty4fSckAIJlCz0bU4ZBZCtcfPBRSaM0NR14avBx3udiQcS0dcZAYZAkf1ZB3oi1PHBzANBXeXHtvwuwFbgNVrxg5uaW8DoUoR4PZBdZAGbw4S8MvZC7Vrca6f45sU64rSqYhBlXDJjexpcpMYd7ki0RSGulLoiUmNO45QQZC5gCEdIfRqKGuZB9gZCUZCTQZDZD"
+          "EAAMIaToJEsABADAAe8xC3b9ukQjehi73mZAMEupXuTIyPW9eAepEUBogkO1gccqLQrzn3gQQLQeAHTlZAPudYiZBVkC8dHcV68MANr1wSIVPsZC9ZA3TzskcrIch9zfdwKXllnZATp7DuwmyR6tY2ZBfZCUXk1Q4bkNZCiyjEPr5u47HI5QZC4AVAewragxAsXLGkE4fSD1g0ebwZDZD"
       },
       response => {
         this.setState({ apiUserResult: response });
@@ -209,7 +209,7 @@ class FBApi extends React.Component {
       {
         fields: "id,name,category,link,subcategory,photo_url,logo_url",
         access_token:
-          "EAAMIaToJEsABAEJoY5ZAty4fSckAIJlCz0bU4ZBZCtcfPBRSaM0NR14avBx3udiQcS0dcZAYZAkf1ZB3oi1PHBzANBXeXHtvwuwFbgNVrxg5uaW8DoUoR4PZBdZAGbw4S8MvZC7Vrca6f45sU64rSqYhBlXDJjexpcpMYd7ki0RSGulLoiUmNO45QQZC5gCEdIfRqKGuZB9gZCUZCTQZDZD"
+          "EAAMIaToJEsABADAAe8xC3b9ukQjehi73mZAMEupXuTIyPW9eAepEUBogkO1gccqLQrzn3gQQLQeAHTlZAPudYiZBVkC8dHcV68MANr1wSIVPsZC9ZA3TzskcrIch9zfdwKXllnZATp7DuwmyR6tY2ZBfZCUXk1Q4bkNZCiyjEPr5u47HI5QZC4AVAewragxAsXLGkE4fSD1g0ebwZDZD"
       },
       response => {
         this.setState({
@@ -230,7 +230,7 @@ class FBApi extends React.Component {
       {
         fields: "id,events,phone,location,emails,link,about",
         access_token:
-          "EAAMIaToJEsABACy4jMWEdCeKpTwD0qNx8a52cuM05KLSHxgrbdznlWF1LyO3w8eyU6GiriFZAsZAQxCfW0S9g4n3HZCeoCawhzZB1i0phPbSsWMMFJINmDEbRy8H5fvMnZBrCVBaPTf2E1tPCQcIEMgj8JdGpyjOcpHiDujYO7kGGTV5P2EZBJeDwQEQP3RxdIgRYxtjmN7wZDZD"
+          "EAAMIaToJEsABALtwNklxDX4VB44FT8KnHw0QTUJjHBCZBXp0vS8X7AyTVRywYBlx0Yo9ws5NPSDq4G3QduJ18ts20x3URGbyeIUYPabhohsPFUhLQs177JTPTNTZC0pjCPsCN63ZBcgPVrQI36d9m77a5EJZAsOIr9wCoj5d6pIHRGw057E5mAODp1jRFZAoZD"
       },
       response => {
         const emailInfo = response === null ? "" : response.emails[0];
