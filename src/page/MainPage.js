@@ -22,7 +22,13 @@ import CssGoogleMap from "../components/CssGoogleMap";
 import CssBottomBar from "../components/CssBottomBar";
 import CssEventList from "../components/CssEventList";
 import NewsPage from "../page/NewsPage";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Redirect,
+  withRouter
+} from "react-router-dom";
 
 const StyledGrid = withStyles({
   root: {
@@ -61,121 +67,105 @@ class FBApi extends React.Component {
 
   render() {
     return (
-      <BrowserRouter>
-        <div className="App">
-          <header className="App-header">
-            <div>
-              <div>
-                <CssTopEditBar />
-              </div>
-              <Switch>
-                <Route exact path="/">
-                  <div>
-                    <div>
-                      <CssTopNavigation value={this.state.pageName} />
-                    </div>
-                    <div>
-                      <CssImageGrid value={this.state.apiPageResult} />
-                    </div>
-                    <div>
-                      {this.state.apiUserResult.email}
-                      <CssBottomNavigation value={this.state.contactInfo} />
-                    </div>
-                    <div>
-                      <h1
-                        className="ColorText-h1"
-                        style={{
-                          color: this.props.navigationChange.color,
-                          fontFamily: this.props.navigationChange.font,
-                        }}
-                      >
-                        About
-                      </h1>
-                    </div>
-                    <div>
-                      <CssAbout
-                        value={{
-                          photoLink: this.state.photoLink,
-                          about: this.state.apiPageInfoResult.about
-                        }}
-                      />
-                    </div>
-                    <div>
-                      <h1
-                        className="ColorText-h1"
-                        style={{
-                          color: this.props.navigationChange.color,
-                          fontFamily: this.props.navigationChange.font,
-                        }}
-                      >
-                        News
-                      </h1>
-                    </div>
-                    <div>
-                      <CssNews value={this.state.logoLink} />
-                    </div>
-                    <div>
-                      <h1
-                        className="ColorText-h1"
-                        style={{
-                          color: this.props.navigationChange.color,
-                          fontFamily: this.props.navigationChange.font,
-                        }}
-                      >
-                        Gallery
-                      </h1>
-                    </div>
-                    <div>
-                      <CssGallery value={this.state.logoLink} />
-                    </div>
-                    <div>
-                      <h1
-                        className="ColorText-h1"
-                        style={{
-                          color: this.props.navigationChange.color,
-                          fontFamily: this.props.navigationChange.font,
-                        }}
-                      >
-                        Events
-                      </h1>
-                    </div>
-                    <div>
-                      <CssEventList value={{
-                        eventList: this.state.eventsList,
-                        logoLink: this.state.logoLink,
-                        pageName: this.state.pageName
-                        }} />
-                    </div>
-                    <div>
-                      <h1
-                        className="ColorText-h1"
-                        style={{
-                          color: this.props.navigationChange.color,
-                          fontFamily: this.props.navigationChange.font,
-                        }}
-                      >
-                        Contact
-                      </h1>
-                    </div>
-                    <div>
-                      <CssContact value={this.state.contactInfo} />
-                    </div>
-                    <div>
-                      <CssGoogleMap value={this.state.contactInfo} />
-                    </div>
-                    <div>
-                      <CssBottomBar value={this.state.pageName} />
-                    </div>
-                  </div>
-                </Route>
-                <Route path="/news">
-                  <NewsPage value={this.state.photoLink} />
-                </Route>
-              </Switch>
-            </div>
-          </header>
+      <div>
+        <div>
+          <CssTopNavigation value={this.state.pageName} />
         </div>
-      </BrowserRouter>
+        <div>
+          <CssImageGrid value={this.state.apiPageResult} />
+        </div>
+        <div>
+          {this.state.apiUserResult.email}
+          <CssBottomNavigation value={this.state.contactInfo} />
+        </div>
+        <div>
+          <h1
+            className="ColorText-h1"
+            style={{
+              color: this.props.navigationChange.color,
+              fontFamily: this.props.navigationChange.font
+            }}
+          >
+            About
+          </h1>
+        </div>
+        <div>
+          <CssAbout
+            value={{
+              photoLink: this.state.photoLink,
+              about: this.state.apiPageInfoResult.about
+            }}
+          />
+        </div>
+        <div>
+          <h1
+            className="ColorText-h1"
+            style={{
+              color: this.props.navigationChange.color,
+              fontFamily: this.props.navigationChange.font
+            }}
+          >
+            News
+          </h1>
+        </div>
+        <div>
+          <CssNews value={this.state.logoLink} />
+        </div>
+        <div>
+          <h1
+            className="ColorText-h1"
+            style={{
+              color: this.props.navigationChange.color,
+              fontFamily: this.props.navigationChange.font
+            }}
+          >
+            Gallery
+          </h1>
+        </div>
+        <div>
+          <CssGallery value={this.state.logoLink} />
+        </div>
+        <div>
+          <h1
+            className="ColorText-h1"
+            style={{
+              color: this.props.navigationChange.color,
+              fontFamily: this.props.navigationChange.font
+            }}
+          >
+            Events
+          </h1>
+        </div>
+        <div>
+          <CssEventList
+            value={{
+              eventList: this.state.eventsList,
+              logoLink: this.state.logoLink,
+              pageName: this.state.pageName
+            }}
+          />
+        </div>
+        <div>
+          <h1
+            className="ColorText-h1"
+            style={{
+              color: this.props.navigationChange.color,
+              fontFamily: this.props.navigationChange.font
+            }}
+          >
+            Contact
+          </h1>
+        </div>
+        <div>
+          <CssContact value={this.state.contactInfo} />
+        </div>
+        <div>
+          <CssGoogleMap value={this.state.contactInfo} />
+        </div>
+        <div>
+          <CssBottomBar value={this.state.pageName} />
+        </div>
+      </div>
     );
   }
 
@@ -193,7 +183,7 @@ class FBApi extends React.Component {
       {
         fields: "id,name,email",
         access_token:
-          "EAAMIaToJEsABALMdyT1q60uoJaTigiRwvE85S3zkZC67cRQ2GafFL7TqmQQfAylS6g3hT4G3g2w3gqeO3OWK1RpasT73MxHca1GwLX6oRzadFGQbTrLb2Di8Y8CrsDkZCF4DmW3QaUFhSww8VfDfGzhrTM0hAALYfHEg08GfU8gLBmgrRVXVxndgKHZBADKIKq1UeeOSwZDZD"
+          "EAAMIaToJEsABAAwM65ZCZCG6LUFeaoWUBBvQPf1DdShKXkm1zLVDcT3J2PATuUZCzHYQXYtiNiEYc4urUZCYsu1jaZCsUjDo3Q7lEk6ZBt3l0UuIVXSJ8JOW5sPAvJTsmHS3aSBjDU1A2fZBM9vNXWgERj2rkkUkKOfI9RpRBYjn9VAurEcV0KFeM5Y6YCX03Xag4IpsDMwdAZDZD"
       },
       response => {
         this.setState({ apiUserResult: response });
@@ -209,7 +199,7 @@ class FBApi extends React.Component {
       {
         fields: "id,name,category,link,subcategory,photo_url,logo_url",
         access_token:
-          "EAAMIaToJEsABALMdyT1q60uoJaTigiRwvE85S3zkZC67cRQ2GafFL7TqmQQfAylS6g3hT4G3g2w3gqeO3OWK1RpasT73MxHca1GwLX6oRzadFGQbTrLb2Di8Y8CrsDkZCF4DmW3QaUFhSww8VfDfGzhrTM0hAALYfHEg08GfU8gLBmgrRVXVxndgKHZBADKIKq1UeeOSwZDZD"
+          "EAAMIaToJEsABAAwM65ZCZCG6LUFeaoWUBBvQPf1DdShKXkm1zLVDcT3J2PATuUZCzHYQXYtiNiEYc4urUZCYsu1jaZCsUjDo3Q7lEk6ZBt3l0UuIVXSJ8JOW5sPAvJTsmHS3aSBjDU1A2fZBM9vNXWgERj2rkkUkKOfI9RpRBYjn9VAurEcV0KFeM5Y6YCX03Xag4IpsDMwdAZDZD"
       },
       response => {
         this.setState({
@@ -230,25 +220,26 @@ class FBApi extends React.Component {
       {
         fields: "id,events,phone,location,emails,link,about",
         access_token:
-          "EAAMIaToJEsABAKQYploymUsZBfZA73ShPlxQ3OR9KFye1ZCbJbZAI7NEfnAtAJGy3ca14bcb1SZBLDCyfQsJdHr6xZCu4UcLZAWVLFcQJUWHVOjaZBHjUmhkAZBKMAhRlT5ZCvPdWgfjV6gW0Opwud0g6EGZBMbWWrZBYK50TNRZAJufAzQqIBelj9WTJQtkCSXy3J4AZD"
+          "EAAMIaToJEsABAH52ndThI6SfFGzBMflK1hcGAbtU10mZB08d6ZCItrxVxA1f42EDY68qZC7scSUe3KJIJrWnbMKG6HjDJ0qaTw8l17Y0P6FWnioCON9Qbnph6Wh1Wk5zIndcpO4mXbYdZCfGtn8pZAs1qwOGlji13ZAHQZBgZBdhpqlmx9qS1ZBo431lKrL02XmZANZCkhpmmShRAZDZD"
       },
       response => {
-        const emailInfo = response === null ? "" : response.emails[0];
-        this.setState({
-          apiPageInfoResult: response,
-          phoneNumber: response.phone.replace("+84", "0"),
-          eventsInfo: response.events.data[0].description,
-          eventsList: response.events.data,
-          contactInfo: {
-            phone: response.phone.replace("+84", "0"),
-            location: response.location.street,
-            latitude: response.location.latitude,
-            longitude: response.location.longitude,
-            emails: emailInfo,
-            link: response.link
-          }
-        });
-        this.props.syncOtherPageInfo(response);
+        if (response.error == null) {
+          this.setState({
+            apiPageInfoResult: response,
+            phoneNumber: response.phone.replace("+84", "0"),
+            eventsInfo: response.events.data[0].description,
+            eventsList: response.events.data,
+            contactInfo: {
+              phone: response.phone.replace("+84", "0"),
+              location: response.location.street,
+              latitude: response.location.latitude,
+              longitude: response.location.longitude,
+              emails: response.emails[0],
+              link: response.link
+            }
+          });
+          this.props.syncOtherPageInfo(response);
+        }
       }
     );
   }

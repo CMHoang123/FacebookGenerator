@@ -7,7 +7,8 @@ import {
   ListItemAvatar,
   Avatar,
   Divider,
-  Button
+  Button,
+  Typography
 } from "@material-ui/core";
 import EventIcon from "@material-ui/icons/Event";
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -100,26 +101,24 @@ function EventList(props) {
                           fontFamily: props.navigationChange.font
                         }}
                       >
-                        <p>
+                        <Typography>
                           Location: {event.place.location.city},
                           {event.place.location.country}
-                        </p>
-                        <p>
+                        </Typography>
+                        <Typography>
                           Start time:
-                          {event.start_time === ""
-                            ? "None"
+                          {event.start_time === "" ? "None"
                             : moment(event.start_time).format(
                                 "dddd, MMMM Do YYYY, h:mm a"
                               )}
-                        </p>
-                        <p>
+                        </Typography>
+                        <Typography>
                           End time:
-                          {event.end_time === ""
-                            ? "None"
+                          {event.end_time === "" ? "None"
                             : moment(event.end_time).format(
                                 "dddd, MMMM Do YYYY, h:mm a"
                               )}
-                        </p>
+                        </Typography>
                       </div>
                     }
                   />

@@ -19,7 +19,7 @@ import {
   syncPageInfo,
   syncOtherPageInfo
 } from "../actions";
-import { BrowserRouter, Link } from "react-router-dom";
+import { BrowserRouter, Link, withRouter } from "react-router-dom";
 
 const StyledGrid = withStyles({
   root: {
@@ -104,7 +104,7 @@ function NewsPage(props) {
             </StyledGrid>
             <StyledGrid item xs={5}>
               <div>
-                <img src={props.value} />
+                {/* <img src={props.value} /> */}
               </div>
             </StyledGrid>
           </StyledGrid>
