@@ -145,7 +145,7 @@ function SideEdit(props) {
       style={{
         backgroundColor: "#8a8a8a",
         marginTop: "0px",
-        paddingBottom: "903%"
+        paddingBottom: "922%"
       }}
     >
       <div>

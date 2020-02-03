@@ -53,7 +53,7 @@ const useStyles = makeStyles({
   },
   divCss: {
     marginTop: "0px",
-    paddingBottom: "547%",
+    paddingBottom: "527%",
     width: "125%"
   }
 });
