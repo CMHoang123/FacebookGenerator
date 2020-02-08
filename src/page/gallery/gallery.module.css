@@ -1,0 +1,11 @@
+.gallery_bar {
+  justify-content: space-evenly;
+  display: flex;
+  padding-top: 10vh;
+  padding-bottom: 20vh;
+}
+
+.gallery_title {
+  color: orangered;
+  font-size: 6vh;
+}

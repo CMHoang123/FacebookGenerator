@@ -1,0 +1,165 @@
+.links {
+  text-decoration: none;
+  color: black;
+  justify-content: center;
+  display: flex;
+}
+
+.center_link {
+  text-decoration: none;
+  font-size: 5vh;
+  color: grey;
+  justify-content: center;
+  display: flex;
+  font-weight: 400;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.header_box {
+  direction: row;
+  color: black;
+  background-color: whitesmoke;
+  align-items: center;
+  display: flex;
+  height: 20vh;
+  font-size: 3vh;
+}
+
+.header_grid {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer_box {
+  direction: row;
+  background-color: rgb(196, 196, 196);
+  color: black;
+  align-items: center;
+  display: flex;
+  height: 15vh;
+  font-size: 3vh;
+  padding-top: 10vh;
+}
+
+.footer_grid {
+  direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer_text_left {
+  text-decoration: none;
+  color: black;
+  justify-content: center;
+  display: flex;
+  font-size: 2.4vh;
+}
+
+.footer_text_right {
+  text-decoration: none;
+  color: black;
+  justify-content: center;
+  display: flex;
+  font-size: 3vh;
+}
+
+.bottom_bar_box {
+  background-color: whitesmoke;
+}
+
+.bottom_bar_grid {
+  direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom_bar_button {
+  color: rgb(71, 71, 71);
+  justify-content: flex-start;
+  display: flex;
+}
+
+.bottom_bar_text {
+  text-decoration: none;
+  color: rgb(71, 71, 71);
+  justify-content: flex-end;
+  display: flex;
+  font-size: 2.2vh;
+}
+
+.bottom_bar_divider {
+  color: rgb(71, 71, 71);
+  justify-content: center;
+  display: flex;
+  font-size: 7.5vh;
+}
+
+.arrow_left {
+  position: absolute;
+  left: 10vh;
+}
+
+.arrow_right {
+  position: absolute;
+  right: 10vh;
+}
+
+.info {
+  position: absolute;
+  text-align: center;
+  font-size: 5vh;
+  bottom: 12vh;
+  left: 12%;
+  right: 12%;
+  padding: 3vh 6vh;
+  display: inline;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 1;
+  background: rgba(24, 20, 20, 0.5);
+}
+
+.img_style {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 95vh;
+}
+
+.carousel_switch_button {
+  color: white;
+}
+
+.news_link {
+  text-decoration: none;
+  color: orangered;
+}
+
+.news_img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 38.2vh;
+  height: 25vh;
+}
+
+.news_card {
+  display: flex;
+}
+
+.news_button {
+  color: orangered;
+  text-align: center;
+  display: flex;
+}
+
+.new_text {
+  color: rgb(92, 92, 92);
+  text-align: center;
+}
+
+.news_grid {
+  justify-content: center;
+  display: flex;
+}

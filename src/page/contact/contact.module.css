@@ -1,0 +1,39 @@
+.contact_title {
+  color: orangered;
+  font-size: 6vh;
+}
+
+.contact_text {
+  color: green;
+  font-size: 2.9vh;
+}
+
+.contact_small_text {
+  color: black;
+  font-size: 2.4vh;
+}
+
+.contact_bar {
+  padding-top: 10vh;
+  padding-bottom: 15vh;
+}
+
+.contact_message_input {
+  width: 100%;
+}
+
+.contact_button_info {
+  height: 8vh;
+  width: 100%;
+}
+
+.contact_button_grid {
+  padding-bottom: 5vh;
+}
+
+.contact_google_map {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 5vh;
+}

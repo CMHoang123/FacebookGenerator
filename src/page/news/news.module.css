@@ -1,0 +1,12 @@
+.news_bar {
+  justify-content: space-evenly;
+  display: flex;
+  padding-top: 10vh;
+  padding-bottom: 20vh;
+}
+
+.news_title {
+  color: orangered;
+  font-size: 6vh;
+}
+
