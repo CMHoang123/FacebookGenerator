@@ -16,7 +16,7 @@
     "fb": "^2.0.0",
     "kill-port": "^1.6.0",
     "material-ui-color-picker": "^3.4.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "passport": "^0.4.1",
     "react": "^16.12.0",
     "react-color": "^2.18.0",
